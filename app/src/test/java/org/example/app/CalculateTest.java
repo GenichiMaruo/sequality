@@ -1,5 +1,9 @@
 package org.example.app;
 
+import static org.junit.Assert.assertEquals;
+
+import org.junit.Test;
+
 public class CalculateTest {
     @Test
     public void testSum() {
@@ -36,4 +40,9 @@ public class CalculateTest {
         assertEquals(expected, calculate.divide(6, 3), 0.001);
     }
 
+    @Test
+    public void testAppReternHelloWorld() {
+        App classUnderTest = new App();
+        assertEquals("Hello World!", classUnderTest.getGreeting());
+    }
 }
