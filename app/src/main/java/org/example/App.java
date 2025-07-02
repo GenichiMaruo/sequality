@@ -10,5 +10,25 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+
+        Calculate calculate = new Calculate();
+
+        // 2と3の計算
+        int sum23 = calculate.sum(2, 3);
+        double avg23 = calculate.average(2, 3);
+        System.out.println("Sum of 2 and 3 is " + sum23 + ". Average is " + avg23 + ".");
+
+        // 1から10の計算
+        int sum1to10 = calculate.sumRange(1, 10);
+        double avg1to10 = calculate.averageRange(1, 10);
+        System.out.println("Sum of 1 to 10 is " + sum1to10 + ". Average is " + avg1to10 + ".");
+
+        // 1から10の奇数の合計
+        int sumOdd1to10 = calculate.sumOddRange(1, 10);
+        System.out.println("Sum of odd of 1 to 10 is " + sumOdd1to10 + ".");
+
+        // 1から10の偶数の合計
+        int sumEven1to10 = calculate.sumEvenRange(1, 10);
+        System.out.println("Sum of even of 1 to 10 is " + sumEven1to10 + ".");
     }
 }
